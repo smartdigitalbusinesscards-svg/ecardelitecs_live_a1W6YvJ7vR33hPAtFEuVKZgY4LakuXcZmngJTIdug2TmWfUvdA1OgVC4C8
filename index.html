@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-  <base href="./">
+<base href="./">
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="theme-color" content="#04151f" />
-<title>Smart Digital eCard</title>
-<meta name="description" content="Smart Digital eCard with tier features." />
+<title>InkPulse AI — Smart Digital eCard</title>
+<meta name="description" content="InkPulse AI Smart Digital eCard." />
 
 <style>
   :root{
@@ -115,7 +115,6 @@
     position:relative;
     overflow:hidden;
   }
-
   .topZone .wm{
     position:absolute;
     inset:0;
@@ -126,7 +125,6 @@
     justify-content:center;
     opacity:.16;
   }
-
   .topZone .wm img{
     width: 120%;
     max-width: none;
@@ -135,7 +133,6 @@
     transform: rotate(0deg) translateY(10px);
     filter: brightness(1.12) contrast(1.08) grayscale(100%);
   }
-
   .topZone > *:not(.wm){
     position:relative;
     z-index:1;
@@ -229,28 +226,6 @@
     border: 1px solid rgba(255,255,255,.18);
     background: linear-gradient(90deg, rgba(79,227,255,.22), rgba(99,255,178,.16));
     color: rgba(236,246,255,.92);
-  }
-  .chip.elite{
-    border: 1px solid rgba(255,255,255,.22);
-    background: linear-gradient(90deg, rgba(99,255,178,.24), rgba(79,227,255,.22));
-    color: rgba(236,246,255,.95);
-    position:relative;
-    overflow:hidden;
-  }
-  .chip.elite::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
-    transform: translateX(-65%);
-    animation: eliteSweep 2.4s ease-in-out infinite;
-    opacity:.9;
-  }
-  @keyframes eliteSweep{
-    0%{ transform: translateX(-65%); opacity:0; }
-    25%{ opacity:.7; }
-    60%{ opacity:.35; }
-    100%{ transform: translateX(135%); opacity:0; }
   }
 
   .hero{
@@ -472,19 +447,15 @@
     opacity:.75;
     pointer-events:none;
   }
+  @keyframes eliteSweep{
+    0%{ transform: translateX(-70%); opacity:0; }
+    25%{ opacity:.7; }
+    60%{ opacity:.35; }
+    100%{ transform: translateX(130%); opacity:0; }
+  }
 
-  .utilHint{
-    font-size:12px;
-    color: rgba(236,246,255,.65);
-    padding: 0 18px 14px;
-    display:none;
-  }
-  .utilityRow{
-    padding: 0 18px 18px;
-    display:none;
-    gap:12px;
-    flex-wrap:wrap;
-  }
+  .utilHint{ font-size:12px; color: rgba(236,246,255,.65); padding: 0 18px 14px; display:none; }
+  .utilityRow{ padding: 0 18px 18px; display:none; gap:12px; flex-wrap:wrap; }
   .utilBtn{
     border-radius: 999px;
     border: 1px solid rgba(255,255,255,.14);
@@ -499,14 +470,6 @@
     cursor:pointer;
     -webkit-tap-highlight-color: transparent;
     text-decoration:none;
-  }
-  .utilBtn svg{ width:16px; height:16px; fill: currentColor; opacity:.95; }
-  .utilBtn:active{ transform: scale(.99); }
-  .utilBtn:disabled{
-    opacity:.4;
-    cursor:not-allowed;
-    pointer-events:none;
-    filter: grayscale(30%);
   }
 
   footer{
@@ -553,13 +516,7 @@
     backdrop-filter: blur(16px);
     overflow:hidden;
   }
-  .grab{
-    width: 48px;
-    height: 5px;
-    border-radius: 999px;
-    background: rgba(255,255,255,.20);
-    margin: 10px auto 0;
-  }
+  .grab{ width: 48px; height: 5px; border-radius: 999px; background: rgba(255,255,255,.20); margin: 10px auto 0; }
   .sheetTop{
     padding: 12px 14px 10px;
     display:flex;
@@ -568,16 +525,8 @@
     gap:10px;
     border-bottom: 1px solid rgba(255,255,255,.10);
   }
-  .sheetTitle{
-    font-weight: 950;
-    letter-spacing:.01em;
-    font-size: 14px;
-  }
-  .sheetSub{
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 2px;
-  }
+  .sheetTitle{ font-weight: 950; letter-spacing:.01em; font-size: 14px; }
+  .sheetSub{ color: var(--muted); font-size: 12px; margin-top: 2px; }
   .xbtn{
     width: 38px; height: 38px;
     border-radius: 14px;
@@ -589,11 +538,7 @@
     place-items:center;
     -webkit-tap-highlight-color: transparent;
   }
-  .sheetBody{
-    padding: 14px;
-    display:grid;
-    gap:12px;
-  }
+  .sheetBody{ padding: 14px; display:grid; gap:12px; }
   .sheetBtn{
     height: 54px;
     border-radius: 18px;
@@ -614,7 +559,6 @@
     color:#031019;
     background: linear-gradient(90deg, rgba(79,227,255,.95), rgba(99,255,178,.85));
   }
-  .sheetBtn svg{ width:18px; height:18px; fill: currentColor; }
 
   @media (max-width: 520px){
     .brandBar{ flex-direction:column; align-items:flex-start; }
@@ -624,10 +568,6 @@
     .hero{ flex-direction:column; align-items:flex-start; }
     .actions{ grid-template-columns: 1fr; }
     .btn.main, .btn.save, .btn.elite{ grid-column:auto; }
-  }
-  @media (prefers-reduced-motion: reduce){
-    .waterGlow, .pulseLine::after, .card::before, .chip.elite::after, .btn.elite::after{ animation:none !important; }
-    .sheet, .overlay{ transition:none !important; }
   }
 </style>
 </head>
@@ -651,8 +591,8 @@
             </div>
 
             <div class="brandText">
-              <div class="brandName" id="companyName">Company</div>
-              <div class="brandTag" id="companyTag">Tagline</div>
+              <div class="brandName" id="companyName">InkPulse AI</div>
+              <div class="brandTag" id="companyTag">Create. Refine. Export.</div>
             </div>
           </div>
 
@@ -667,27 +607,27 @@
         <section class="hero">
           <div class="avatarRing">
             <div class="avatarWrap">
-              <img class="avatar" src="profile.jpg" alt="Profile photo"
+              <img class="avatar" src="profile-placeholder.jpg" alt="Profile photo"
                    onerror="this.style.display='none'; this.parentElement.style.background='rgba(0,0,0,.18)';" />
             </div>
           </div>
 
           <div class="who">
-            <h1 class="name" id="fullName">Your Name</h1>
-            <div class="role" id="title">Title</div>
+            <h1 class="name" id="fullName">Eric Buckner</h1>
+            <div class="role" id="title">Founder &amp; Developer</div>
             <div class="pulseLine" aria-hidden="true"></div>
           </div>
         </section>
       </div>
 
       <section class="info">
-        <button class="tileBtn" id="phoneTile" type="button" aria-label="Call or text">
+        <button class="tileBtn" id="phoneTile" type="button" aria-label="Call">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.7 3.1 3.5 4.9 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.9.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.1 21 3 13.9 3 5c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.9.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
           </div>
           <div class="tileText">
             <div class="label">Call / Text</div>
-            <div class="value" id="phonePretty">(000) 000-0000</div>
+            <div class="value" id="phonePretty">(209) 629-0160</div>
           </div>
         </button>
 
@@ -697,7 +637,7 @@
           </div>
           <div class="tileText">
             <div class="label">Email</div>
-            <div class="value"><a id="emailLink" href="mailto:example@email.com">example@email.com</a></div>
+            <div class="value"><a id="emailLink" href="mailto:Support@inkpulseai.com">Support@inkpulseai.com</a></div>
           </div>
         </div>
 
@@ -707,20 +647,20 @@
           </div>
           <div class="tileText">
             <div class="label">Website</div>
-            <div class="value"><a id="siteLink" href="https://example.com" target="_blank" rel="noopener">example.com</a></div>
+            <div class="value"><a id="siteLink" href="https://www.inkpulseai.com" target="_blank" rel="noopener">inkpulseai.com</a></div>
           </div>
         </div>
       </section>
 
       <section class="actions" id="actions">
-        <a class="btn main" id="bookBtn" href="#" target="_blank" rel="noopener" aria-label="Book appointment">
+        <a class="btn main" id="bookBtn" href="#" target="_blank" rel="noopener" aria-label="Get Early Supporter Access">
           <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
-          Book an Appointment
+          Get Early Supporter Access
         </a>
 
         <a class="btn elite" id="eliteCtaBtn" href="#" target="_blank" rel="noopener" aria-label="Elite call-to-action">
           <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.7 4.1L18 21l-6-4-6 4 1.7-7.9L2 9h7l3-7z"/></svg>
-          <span id="eliteCtaLabel">Elite Bonus</span>
+          <span id="eliteCtaLabel">Support the Project</span>
         </a>
 
         <a class="btn primary" id="callBtn" href="#" aria-label="Call">
@@ -755,19 +695,17 @@
 
       <section class="utilityRow" id="utilityRow">
         <button class="utilBtn" id="qrBtn" type="button" aria-label="Show QR">
-          <svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm10 0h2v2h-2v-2zm-2-2h4v4h-4v-4zm6 0h2v2h-2v-2zm0 4h2v4h-2v-4zm-4 2h2v2h-2v-2zm2 2h4v2h-4v-2z"/></svg>
           Show QR
         </button>
 
         <button class="utilBtn" id="qrDownloadBtn" type="button" aria-label="Download QR">
-          <svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM12 2v12l4-4 1.4 1.4L12 17.8 6.6 11.4 8 10l4 4V2h0z"/></svg>
           Download QR
         </button>
       </section>
 
       <footer>
         <div>Smart Digital eCard</div>
-        <div id="tierBadge">STARTER</div>
+        <div id="tierBadge">ELITE</div>
       </footer>
     </main>
   </div>
@@ -788,60 +726,31 @@
     </div>
   </div>
 
-<script>
-  window.BIZ = {
-    tier: "elite",
+  <script>
+    window.BIZ = {
+      tier: "elite",
 
-    fullName: "Eric Buckner",
-    company: "InkPulse AI",
-    tagline: "Support the Project",
-    title: "Founder & Developer",
+      fullName: "Eric Buckner",
+      company: "InkPulse AI",
+      tagline: "Create. Refine. Export.",
+      title: "Founder & Developer",
 
-    phonePretty: "(209) 629-0160",
-    phoneTel: "2096290160",
+      phonePretty: "(209) 629-0160",
+      phoneTel: "2096290160",
 
-    email: "support@inkpulseai.com",
-    website: "https://www.inkpulseai.com",
+      email: "Support@inkpulseai.com",
+      website: "https://www.inkpulseai.com",
 
-    bookingLink: "",
+      bookingLink: "https://www.inkpulseai.com/early-supporter-access",
 
-    textPrefill: "Hey Eric — this is Greg. Quick question:",
+      textPrefill: "Hey Eric — I checked out InkPulse AI. How do I get Early Supporter Access?",
 
-    eliteCtaLabel: "Early Supporter Access",
-    eliteCtaUrl: "https://www.inkpulseai.com/early-supporter-access"
-  };
-</script>
+      eliteCtaLabel: "Support the Project",
+      eliteCtaUrl: "https://www.inkpulseai.com/early-supporter-access"
+    };
+  </script>
 
-<script>
-  (function () {
-    const box = document.createElement("div");
-    box.id = "debugErrors";
-    box.style.cssText = `
-      position:fixed; left:10px; right:10px; bottom:10px; z-index:99999;
-      background:rgba(140,0,0,.92); color:#fff; padding:10px 12px; border-radius:12px;
-      font:12px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      box-shadow:0 20px 60px rgba(0,0,0,.6);
-      display:none; white-space:pre-wrap; word-break:break-word;
-    `;
-    document.addEventListener("DOMContentLoaded", () => document.body.appendChild(box));
-
-    function show(msg){
-      box.style.display = "block";
-      box.textContent = "JS ERROR:\n" + msg;
-    }
-
-    window.addEventListener("error", (e) => {
-      const msg = `${e.message}\n${e.filename || ""}:${e.lineno || ""}:${e.colno || ""}`;
-      show(msg);
-    });
-
-    window.addEventListener("unhandledrejection", (e) => {
-      show(String(e.reason || e));
-    });
-  })();
-</script>
-
-  <script src="shared/config.js"></script>
-  <script src="shared/shared.js"></script>
+  <script src="./shared/config.js"></script>
+  <script src="./shared/shared.js"></script>
 </body>
 </html>
