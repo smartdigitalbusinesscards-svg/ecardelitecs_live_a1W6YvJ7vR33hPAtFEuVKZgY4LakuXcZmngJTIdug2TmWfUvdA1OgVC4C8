@@ -2,13 +2,8 @@
 (() => {
   window.BIZ = window.BIZ || {};
 
-  // 1) default tier if nothing else provided
   if (!window.BIZ.tier) window.BIZ.tier = "starter";
 
-  // 2) allow URL tier via:
-  //    ?tier=elite   (preferred)
-  //    #tier=elite   (also supported)
-  //    #?tier=elite  (supported too)
   const pickTierFromUrl = () => {
     const fromSearch = new URLSearchParams(window.location.search).get("tier");
 
@@ -23,7 +18,5 @@
   };
 
   pickTierFromUrl();
-
-  // If user changes only the hash later, still update tier
   window.addEventListener("hashchange", pickTierFromUrl);
 })();
